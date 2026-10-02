@@ -15,7 +15,6 @@
     :root {
       --bg: #0d0c1d;
       --bg-2: #121027;
-
       --surface: #17142f;
       --surface-2: #1c1738;
       --surface-3: #211b43;
@@ -75,7 +74,6 @@
         sans-serif;
 
       line-height: 1.55;
-
       overflow-x: hidden;
     }
 
@@ -208,7 +206,6 @@
 
     .hero {
       padding: 18px 0 58px;
-
       position: relative;
     }
 
@@ -236,7 +233,6 @@
         minmax(0, 1.02fr);
 
       gap: 34px;
-
       align-items: start;
     }
 
@@ -257,7 +253,6 @@
         );
 
       line-height: .98;
-
       letter-spacing: -.05em;
     }
 
@@ -361,7 +356,6 @@
 
     .section-header {
       width: 100%;
-
       max-width: none;
 
       margin:
@@ -394,7 +388,6 @@
         );
 
       line-height: 1.04;
-
       letter-spacing: -.04em;
     }
 
@@ -447,9 +440,7 @@
       padding: 34px;
 
       display: flex;
-
       flex-direction: column;
-
       justify-content: space-between;
 
       min-height: 100%;
@@ -464,9 +455,7 @@
         );
 
       font-weight: 900;
-
       letter-spacing: -.08em;
-
       line-height: .9;
 
       color: transparent;
@@ -481,7 +470,6 @@
         26px 0 0;
 
       color: var(--muted);
-
       font-size: 16px;
     }
 
@@ -531,7 +519,6 @@
         0 0 8px;
 
       font-size: 19px;
-
       line-height: 1.25;
     }
 
@@ -541,7 +528,6 @@
       color: var(--muted);
 
       font-size: 14px;
-
       line-height: 1.55;
     }
 
@@ -623,7 +609,6 @@
         );
 
       position: relative;
-
       overflow: hidden;
 
       transition:
@@ -666,7 +651,6 @@
       border-radius: 12px;
 
       display: grid;
-
       place-items: center;
 
       background:
@@ -679,7 +663,6 @@
       color: var(--cyan);
 
       font-weight: 900;
-
       font-size: 13px;
     }
 
@@ -696,7 +679,6 @@
       color: var(--muted);
 
       font-size: 14px;
-
       line-height: 1.55;
     }
 
@@ -714,11 +696,16 @@
       display: grid;
 
       grid-template-columns:
-        1fr 1fr;
+        repeat(
+          2,
+          minmax(0,1fr)
+        );
 
       gap: 24px;
 
       margin-top: 34px;
+
+      align-items: stretch;
     }
 
     .shot {
@@ -736,11 +723,18 @@
       box-shadow:
         0 20px 70px
         rgba(0,0,0,.24);
+
+      display: flex;
+      flex-direction: column;
+
+      height: 100%;
     }
 
     .shot-head {
       padding:
         22px 24px 18px;
+
+      min-height: 132px;
     }
 
     .shot-label {
@@ -782,13 +776,23 @@
         1px solid
         rgba(255,255,255,.06);
 
-      background: #fff;
+      background: #ffffff;
+
+      height: 470px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .shot-media img {
       width: 100%;
+      height: 100%;
 
-      height: auto;
+      object-fit: contain;
+      object-position: center;
+
+      display: block;
     }
 
 
@@ -860,7 +864,6 @@
       display: inline-flex;
 
       align-items: center;
-
       justify-content: center;
 
       min-height: 48px;
@@ -917,7 +920,7 @@
 
 
     /* =========================
-       REVEAL ANIMATION
+       ANIMATION
     ========================== */
 
     .reveal {
@@ -932,7 +935,6 @@
 
     .reveal.visible {
       opacity: 1;
-
       transform: none;
     }
 
@@ -984,6 +986,10 @@
       .feature-side {
         min-height: 260px;
       }
+
+      .shot-media {
+        height: 410px;
+      }
     }
 
 
@@ -1017,6 +1023,20 @@
           1fr;
       }
 
+      .shot-head {
+        min-height: auto;
+      }
+
+      .shot-media {
+        height: auto;
+        min-height: 320px;
+      }
+
+      .shot-media img {
+        height: auto;
+        max-height: 520px;
+      }
+
       .cta-box {
         grid-template-columns:
           1fr;
@@ -1045,6 +1065,10 @@
         position: static;
 
         margin-top: 10px;
+      }
+
+      .shot-media {
+        min-height: 250px;
       }
     }
 
@@ -1249,11 +1273,9 @@
               </h3>
 
               <p>
-
                 Build a unified view of each player
                 across relevant customer data
                 and touchpoints.
-
               </p>
 
             </article>
@@ -1267,11 +1289,9 @@
               </h3>
 
               <p>
-
                 Create complex segments using
                 demographic,
                 transactional and behavioral criteria.
-
               </p>
 
             </article>
@@ -1285,11 +1305,9 @@
               </h3>
 
               <p>
-
                 Use predictive models to identify
                 player behavior,
                 value and churn-related signals.
-
               </p>
 
             </article>
@@ -1303,11 +1321,9 @@
               </h3>
 
               <p>
-
                 Transform player intelligence
                 into practical CRM actions
                 and personalized experiences.
-
               </p>
 
             </article>
@@ -1321,11 +1337,9 @@
               </h3>
 
               <p>
-
                 Use current player signals
                 to support timely,
                 relevant decisions and actions.
-
               </p>
 
             </article>
@@ -1360,19 +1374,15 @@
           </div>
 
           <h2>
-
             Omnichannel Campaign Management
             & Flexible Bonus Engine
-
           </h2>
 
           <p class="section-intro">
-
             Connect channels,
             campaign logic,
             segmentation and bonuses
             in one operational flow.
-
           </p>
 
         </div>
@@ -1389,14 +1399,12 @@
             </div>
 
             <p>
-
               From communication
               to reward delivery —
               campaigns can react
               to player behavior,
               lifecycle stage
               and business conditions.
-
             </p>
 
           </aside>
@@ -1413,13 +1421,11 @@
               </h3>
 
               <p>
-
                 Engage players through email,
                 SMS,
                 push notifications,
                 Insite messages
                 and other integrated channels.
-
               </p>
 
             </article>
@@ -1433,14 +1439,12 @@
               </h3>
 
               <p>
-
                 Build multi-step campaigns
                 with scheduling,
                 triggers,
                 conditions,
                 exclusions,
                 and player segmentation.
-
               </p>
 
             </article>
@@ -1454,14 +1458,12 @@
               </h3>
 
               <p>
-
                 Configure bonuses based on deposits,
                 bets,
                 games,
                 providers,
                 player activity,
                 and other business conditions.
-
               </p>
 
             </article>
@@ -1475,13 +1477,11 @@
               </h3>
 
               <p>
-
                 Deliver targeted bonuses
                 and incentives based on player segments,
                 lifecycle stage,
                 behavior,
                 and value.
-
               </p>
 
             </article>
@@ -1495,11 +1495,9 @@
               </h3>
 
               <p>
-
                 Trigger and distribute bonuses
                 automatically based on player actions
                 and campaign rules.
-
               </p>
 
             </article>
@@ -1513,13 +1511,11 @@
               </h3>
 
               <p>
-
                 Track campaign performance
                 and measure engagement,
                 deposits,
                 bets,
                 and other business KPIs.
-
               </p>
 
             </article>
@@ -1558,12 +1554,10 @@
           </h2>
 
           <p class="section-intro">
-
             Create loyalty structures
             that can progress,
             reward and retain players automatically
             using configurable business rules.
-
           </p>
 
         </div>
@@ -1580,13 +1574,11 @@
             </div>
 
             <p>
-
               Flexible progression logic
               lets loyalty programs adapt
               to different player values,
               activity levels
               and retention strategies.
-
             </p>
 
           </aside>
@@ -1603,12 +1595,10 @@
               </h3>
 
               <p>
-
                 Automatically promote,
                 maintain,
                 or downgrade players
                 based on configurable loyalty criteria.
-
               </p>
 
             </article>
@@ -1622,12 +1612,10 @@
               </h3>
 
               <p>
-
                 Define different downgrade rules,
                 activity days,
                 maintenance XP thresholds
                 to match your loyalty strategy.
-
               </p>
 
             </article>
@@ -1641,10 +1629,8 @@
               </h3>
 
               <p>
-
                 Apply configurable point multipliers
                 on each loyalty level.
-
               </p>
 
             </article>
@@ -1658,12 +1644,10 @@
               </h3>
 
               <p>
-
                 Support continuous
                 or monthly programs
                 with configurable level ranges
                 and reward settings.
-
               </p>
 
             </article>
@@ -1677,12 +1661,10 @@
               </h3>
 
               <p>
-
                 Calculate player progress
                 using deposits,
                 sports betting,
                 casino activity.
-
               </p>
 
             </article>
@@ -1696,12 +1678,10 @@
               </h3>
 
               <p>
-
                 Configure different rewards,
                 bonuses,
                 and incentives
                 for each loyalty level.
-
               </p>
 
             </article>
@@ -1741,14 +1721,12 @@
           </h2>
 
           <p class="section-intro">
-
             Turn CRM activity
             into an engaging progression experience
             with missions,
             levels,
             challenges
             and redeemable rewards.
-
           </p>
 
         </div>
@@ -1765,12 +1743,10 @@
             </div>
 
             <p>
-
               Gamification mechanics
               connect naturally with CRM,
               loyalty and bonus workflows
               to support ongoing player engagement.
-
             </p>
 
           </aside>
@@ -1787,7 +1763,6 @@
               </h3>
 
               <p>
-
                 Create one-time
                 or recurring missions
                 with configurable objectives,
@@ -1795,7 +1770,6 @@
                 time limits,
                 player segments,
                 and rewards.
-
               </p>
 
             </article>
@@ -1809,13 +1783,11 @@
               </h3>
 
               <p>
-
                 Give players a clear progression path
                 with configurable levels,
                 points thresholds,
                 themes,
                 and level-specific rewards.
-
               </p>
 
             </article>
@@ -1829,13 +1801,11 @@
               </h3>
 
               <p>
-
                 Allow players to spend
                 accumulated points
                 on bonuses,
                 free spins
                 or physical rewards.
-
               </p>
 
             </article>
@@ -1849,12 +1819,10 @@
               </h3>
 
               <p>
-
                 Target missions and rewards
                 to specific player segments,
                 loyalty levels,
                 or behavioral profiles.
-
               </p>
 
             </article>
@@ -1868,13 +1836,11 @@
               </h3>
 
               <p>
-
                 Update player progress
                 and unlock missions,
                 levels,
                 and rewards
                 based on player activity.
-
               </p>
 
             </article>
@@ -1888,11 +1854,9 @@
               </h3>
 
               <p>
-
                 Connect gamification mechanics
                 with bonuses
                 and loyalty programs.
-
               </p>
 
             </article>
@@ -1932,7 +1896,6 @@
           </h2>
 
           <p class="section-intro">
-
             Centrivo connects customer understanding,
             communication,
             automation,
@@ -1940,7 +1903,6 @@
             gamification
             and performance management
             in one CRM environment.
-
           </p>
 
         </div>
@@ -1961,11 +1923,9 @@
             </h3>
 
             <p>
-
               Manage customer information
               from multiple sources
               with reusable custom views.
-
             </p>
 
           </article>
@@ -1983,11 +1943,9 @@
             </h3>
 
             <p>
-
               Build audiences using demographic,
               transactional
               and behavioral criteria.
-
             </p>
 
           </article>
@@ -2005,11 +1963,9 @@
             </h3>
 
             <p>
-
               Launch personalized
               multi-channel campaigns
               and recurring activities.
-
             </p>
 
           </article>
@@ -2027,14 +1983,12 @@
             </h3>
 
             <p>
-
               Automate touchpoints
               with conditions,
               triggers,
               waits,
               calculations
               and rewards.
-
             </p>
 
           </article>
@@ -2052,13 +2006,11 @@
             </h3>
 
             <p>
-
               Create missions,
               tasks,
               player levels,
               points
               and redeemable reward experiences.
-
             </p>
 
           </article>
@@ -2076,12 +2028,10 @@
             </h3>
 
             <p>
-
               Track campaign metrics,
               KPI trends
               and CRM performance
               through dashboards.
-
             </p>
 
           </article>
@@ -2099,13 +2049,11 @@
             </h3>
 
             <p>
-
               Flexible levels,
               progression,
               multipliers,
               rewards,
               and downgrade rules.
-
             </p>
 
           </article>
@@ -2123,11 +2071,9 @@
             </h3>
 
             <p>
-
               Identify churn
               and enable proactive,
               data-driven engagement.
-
             </p>
 
           </article>
@@ -2145,11 +2091,9 @@
             </h3>
 
             <p>
-
               Timely,
               and automated communications
               across their entire lifecycle.
-
             </p>
 
           </article>
@@ -2183,12 +2127,10 @@
           </h2>
 
           <p class="section-intro">
-
             A closer look
             at the operational interfaces
             behind player intelligence
             and automated customer journeys.
-
           </p>
 
         </div>
@@ -2211,13 +2153,11 @@
               </h3>
 
               <p>
-
                 Player information,
                 activity,
                 campaigns
                 and CRM context
                 in one operational view.
-
               </p>
 
             </div>
@@ -2249,13 +2189,11 @@
               </h3>
 
               <p>
-
                 Visual automation
                 with triggers,
                 waits,
                 conditions
                 and reward logic.
-
               </p>
 
             </div>
@@ -2302,11 +2240,9 @@
             </h2>
 
             <p>
-
               Contact your Account Manager
               to learn more about the platform
               and the next steps.
-
             </p>
 
           </div>
